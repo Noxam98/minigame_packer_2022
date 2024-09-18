@@ -1,0 +1,166 @@
+
+.wrapper{
+    position: absolute;
+    width: 422px;
+    height: 245px;
+    left: 50%;
+    top: calc(50% + 100px);
+    transform: translate(-50%, -50%);
+    /*padding: 127px 121px 124px 129px;*/
+    padding: 0;
+    transition: 1s;
+}
+@media (max-width: 769px) {
+    .wrapper{
+        scale: .5;
+        transform: translate(-100%, -100%);
+        transition: 1s;
+
+    }
+    .box{
+
+    }
+    .boxTop{
+        height: 122px;
+
+    }
+    .boxDown{
+        height: 124px;
+
+    }
+    .boxLeft{
+        width: 129px;
+    }
+    .boxRight{
+
+    }
+
+}
+
+.box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("./src/images/box.png") no-repeat fixed top;
+
+    /*background-color: rgba(15, 11, 18, 0.8);*/
+
+
+}
+
+.boxTopOpen {
+    position: absolute;
+    top: calc(-50% + 4px);
+    /*left: -2px;*/
+    width: 100%;
+    height: 244px;
+
+    background: url("./src/images/box_up.png") no-repeat fixed top;
+    transform: rotateX(0deg) ;
+    transition: .4s ease-out;
+}
+.boxTopClosed {
+    position: absolute;
+    top: calc(-50% + 4px);
+    /*left: -2px;*/
+    width: 100%;
+    height: 244px;
+
+    background: url("./src/images/box_up.png") no-repeat fixed top;
+    transform: rotateX(180deg) ;
+    transition: .4s ease-out;
+    backdrop-filter: sepia(32%);
+
+}
+
+
+/*.boxTop:hover {*/
+/*    !*transform: rotateX(-160deg) rotateZ(.2deg);*!*/
+/*    backdrop-filter: hue-rotate(10deg);*/
+/*    transition: .04s ease-out;*/
+/*    cursor: pointer;*/
+/*}*/
+
+.boxDownOpen {
+    position: absolute;
+    bottom: calc(-50% + 7px);
+    left: 0;
+    height: 248px;
+    width: 100%;
+
+    background: url("./src/images/box_down.png") no-repeat fixed top;
+    transform: rotateX(180deg) rotateZ(.2deg);
+    transition: .4s ease-out;
+    /*display: none;*/
+
+}
+.boxDownClosed {
+    position: absolute;
+    bottom: calc(-50%);
+    left: 0;
+    height: 248px;
+    width: 100%;
+
+    background: url("./src/images/box_down.png") no-repeat fixed top;
+    transform: rotateX(0deg) rotateZ(.2deg);
+    transition: .4s ease-out;
+    backdrop-filter: sepia(32%);
+
+
+}
+.boxDown:hover {
+    /*transform: rotateX(-160deg) rotateZ(.2deg);*/
+    backdrop-filter: hue-rotate(10deg);
+    transition: .04s ease-out;
+    cursor: pointer;
+}
+
+.boxLeftOpen {
+    position: absolute;
+    top: 0;
+    left: -29%;
+    height: 99%;
+    width: 258px;
+    background: url("./src/images/box_left.png") no-repeat fixed left;
+    transform: rotateY(0deg) rotateZ(-1deg);
+    transition: .4s ease-out;
+}
+.boxLeftClosed {
+    position: absolute;
+    top: 0;
+    left: -31%;
+    height: 99%;
+    width: 258px;
+    background: url("./src/images/box_left.png") no-repeat fixed left;
+    transform: rotateY(180deg) rotateZ(-1deg);
+    backdrop-filter: sepia(32%);
+    transition: .4s ease-out;
+}
+
+.boxRightOpen {
+    position: absolute;
+    /*bottom: calc(-50% + 7px);*/
+    top: 0;
+    right: -28%;
+    height: 99%;
+    width: 56.5%;
+
+    background: url("./src/images/box_right.png") no-repeat fixed left;
+    transform: rotateY(180deg);
+    transition: .4s ease-out;
+
+}
+.boxRightClosed {
+    position: absolute;
+    /*bottom: calc(-50% + 7px);*/
+    top: 0;
+    right: -28%;
+    height: 99%;
+    width: 56.5%;
+
+    background: url("./src/images/box_right.png") no-repeat fixed left;
+    transform: rotateY(0deg);
+    transition: .4s ease-out;
+    backdrop-filter: sepia(32%);
+
+}

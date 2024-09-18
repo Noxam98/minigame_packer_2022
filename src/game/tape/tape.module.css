@@ -1,0 +1,99 @@
+
+@media (max-width: 769px) {
+    .tape{
+        scale: .5;
+        transform: translate(-100%, -50%);
+    /*    */
+    }
+
+}
+
+
+.lineStatic{
+    position: absolute;
+    z-index: 1;
+    top: calc(50% + 95px);
+
+    left: 50%;
+    /*height: px;*/
+    width: 350px;
+    height: 10px;
+
+    box-shadow: 0 -3px 8px 8px #de8f1c;
+    background-color: #de8f1c;
+    /*background-color: red;*/
+    transform: translate(-50%, -50%);
+    opacity: .2;
+    transition: .4s height, .4s width, .3s box-shadow, .2s background-color;
+
+
+    /*transition: 1s box-shadow;*/
+
+}
+
+.lineLight{
+    position: absolute;
+    z-index: 1;
+    top: calc(50% + 95px);
+    left: 50%;
+    /*height: px;*/
+    width: 380px;
+    height: 60px;
+
+    /*box-shadow: 0 -3px 11px 11px #779cfa;*/
+    /*background-color: #779cfa;*/
+    border: 3px solid #930000;
+    border-radius: 10px;
+    /*background-color: red;*/
+    transform: translate(-50%, -50%);
+    opacity: .4;
+
+    transition: .2s height, .1s width, .2s;
+    /*transition: .2s width;*/
+}
+
+
+.lineHovered{
+    background-color: #930000;
+}
+
+.tapeStatic{
+    position: absolute;
+    transition: 1s;
+    z-index: 9;
+    /*overflow: hidden;*/
+    /*background-color: red;*/
+}
+.tapeDragged{
+    /*transition: 0;*/
+    z-index: 10;
+    opacity: .5;
+    position: absolute;
+}
+.tapeDropped{
+    scale: .7;
+    transition: 1s;
+    transition-timing-function: ease-out;
+    position: absolute;
+}
+@media (max-width: 769px) {
+    .lineStatic{
+        width: 175px;
+    }
+    .lineLight{
+        width: 190px;
+        height: 30px;
+
+    }
+    .tapeDropped{
+        scale: .45;
+        transition: 1s;
+        transition-timing-function: ease-out;
+        position: absolute;
+    }
+
+}
+
+
+
+
